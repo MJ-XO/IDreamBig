@@ -190,7 +190,7 @@ function Home() {
               
             ].map((t) => (
               <div key={t.n} className="card-textured p-14 text-center transition-transform duration-300 hover:-translate-y-1">
-                <div className={`mx-auto flex h-36 w-36 items-center justify-center rounded-full ${t.c} font-display text-2xl font-bold overflow-hidden`}>
+                <div className={`mx-auto flex h-35 w-35 items-center justify-center rounded-full ${t.c} font-display text-2xl font-bold overflow-hidden`}>
                   {t.img ? (
                     <img src={t.img} alt={t.n} className="h-full w-full object-cover" />
                   ) : (
