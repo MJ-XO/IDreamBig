@@ -1,0 +1,50 @@
+name: Build and Deploy iDreamBig
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Commit and Push Built Files
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add -f dist/
+          git diff-index --quiet HEAD || git commit -m "Automated build: update dist folder"
+          git push origin main
+
+      - name: Wait for GitHub to sync
+        run: sleep 5
+
+      - name: Force Update cPanel Repository
+        run: |
+          curl -s -X POST \
+            -H "Authorization: cpanel idreambig:${{ secrets.CPANEL_API_TOKEN }}" \
+            -d "repository_root=/home/idreambig/idreambig_repo" \
+            "https://idreambig.org:2083/execute/VersionControl/update"
+          sleep 15
+
+      - name: Deploy from Updated Repository
+        run: |
+          curl -s -X POST \
+            -H "Authorization: cpanel idreambig:${{ secrets.CPANEL_API_TOKEN }}" \
+            -d "repository_root=/home/idreambig/idreambig_repo" \
+            "https://idreambig.org:2083/execute/VersionControlDeployment/create"

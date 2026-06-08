@@ -1,0 +1,174 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@source inline("bg-leaf/15 bg-leaf/20 text-leaf bg-leaf bg-sun/15 bg-sun/20 text-sun bg-sun bg-primary/15 text-primary bg-primary");
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-leaf: var(--leaf);
+  --color-leaf-foreground: var(--leaf-foreground);
+  --color-sun: var(--sun);
+  --color-sun-foreground: var(--sun-foreground);
+  --color-paper: var(--paper);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Logo palette */
+  --primary: oklch(0.32 0.09 252);            /* deep navy */
+  --primary-foreground: oklch(0.985 0.005 90);
+  --leaf: oklch(0.62 0.16 142);               /* leaf green */
+  --leaf-foreground: oklch(0.985 0.005 90);
+  --sun: oklch(0.76 0.16 60);                 /* warm orange */
+  --sun-foreground: oklch(0.22 0.05 252);
+
+  --paper: oklch(0.985 0.012 90);             /* warm off-white */
+  --background: oklch(0.985 0.012 90);
+  --foreground: oklch(0.22 0.05 252);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.05 252);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.05 252);
+
+  --secondary: oklch(0.95 0.02 142);
+  --secondary-foreground: oklch(0.32 0.09 252);
+  --muted: oklch(0.95 0.015 90);
+  --muted-foreground: oklch(0.45 0.03 252);
+  --accent: oklch(0.92 0.04 60);
+  --accent-foreground: oklch(0.32 0.09 252);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.985 0.005 90);
+  --border: oklch(0.88 0.02 90);
+  --input: oklch(0.88 0.02 90);
+  --ring: oklch(0.62 0.16 142);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    /* subtle paper grain */
+    background-image:
+      radial-gradient(oklch(0.32 0.09 252 / 0.04) 1px, transparent 1px),
+      radial-gradient(oklch(0.62 0.16 142 / 0.035) 1px, transparent 1px);
+    background-size: 22px 22px, 34px 34px;
+    background-position: 0 0, 11px 17px;
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+}
+
+/* Flat, textured button — no gloss, no gradient sheen */
+@utility btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border: 1px solid color-mix(in oklab, var(--color-primary) 88%, black 12%);
+  box-shadow: 0 2px 0 0 color-mix(in oklab, var(--color-primary) 70%, black 30%);
+  background-image:
+    repeating-linear-gradient(45deg,
+      color-mix(in oklab, var(--color-primary) 100%, white 6%) 0 2px,
+      var(--color-primary) 2px 4px);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  cursor: pointer;
+}
+@utility btn-flat-hover {
+  &:hover { transform: translateY(-1px); box-shadow: 0 4px 0 0 color-mix(in oklab, var(--color-primary) 70%, black 30%); }
+  &:active { transform: translateY(1px); box-shadow: 0 1px 0 0 color-mix(in oklab, var(--color-primary) 70%, black 30%); }
+}
+
+@utility btn-sun {
+  background-color: var(--color-sun);
+  color: var(--color-sun-foreground);
+  border-color: color-mix(in oklab, var(--color-sun) 80%, black 20%);
+  box-shadow: 0 2px 0 0 color-mix(in oklab, var(--color-sun) 60%, black 40%);
+  background-image:
+    repeating-linear-gradient(45deg,
+      color-mix(in oklab, var(--color-sun) 100%, white 6%) 0 2px,
+      var(--color-sun) 2px 4px);
+  &:hover { box-shadow: 0 4px 0 0 color-mix(in oklab, var(--color-sun) 60%, black 40%); }
+  &:active { box-shadow: 0 1px 0 0 color-mix(in oklab, var(--color-sun) 60%, black 40%); }
+}
+
+@utility btn-leaf {
+  background-color: var(--color-leaf);
+  color: var(--color-leaf-foreground);
+  border-color: color-mix(in oklab, var(--color-leaf) 80%, black 20%);
+  box-shadow: 0 2px 0 0 color-mix(in oklab, var(--color-leaf) 60%, black 40%);
+  background-image:
+    repeating-linear-gradient(45deg,
+      color-mix(in oklab, var(--color-leaf) 100%, white 6%) 0 2px,
+      var(--color-leaf) 2px 4px);
+  &:hover { box-shadow: 0 4px 0 0 color-mix(in oklab, var(--color-leaf) 60%, black 40%); }
+  &:active { box-shadow: 0 1px 0 0 color-mix(in oklab, var(--color-leaf) 60%, black 40%); }
+}
+
+@utility btn-outline-flat {
+  background-color: transparent;
+  background-image: none;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  box-shadow: 0 2px 0 0 color-mix(in oklab, var(--color-primary) 30%, transparent);
+  &:hover {
+    background-color: color-mix(in oklab, var(--color-primary) 8%, transparent);
+    box-shadow: 0 4px 0 0 color-mix(in oklab, var(--color-primary) 30%, transparent);
+  }
+}
+
+@utility card-textured {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-image:
+    radial-gradient(oklch(0.32 0.09 252 / 0.05) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility animate-fade-up { animation: fade-up 0.7s ease-out both; }
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@utility animate-float { animation: float-soft 5s ease-in-out infinite; }

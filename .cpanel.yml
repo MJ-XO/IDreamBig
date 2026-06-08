@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - /usr/local/cpanel/3rdparty/bin/git -C /home/idreambig/idreambig_repo checkout -- .
+    - /usr/local/cpanel/3rdparty/bin/git -C /home/idreambig/idreambig_repo pull origin main
+    - /bin/cp -Rf /home/idreambig/idreambig_repo/dist/. /home/idreambig/public_html/
