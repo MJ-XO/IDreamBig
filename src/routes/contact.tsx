@@ -28,37 +28,37 @@ function ContactPage() {
       
 
       {/* Contact details + form */}
-      <section className="border-t border-border bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-8xl gap-12 pl-30 px-5 pr-30 py-20 md:grid-cols-2">
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-sun">Get in touch</div>
-            <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl">Donate, volunteer, or just say hello.</h2>
-            <p className="mt-4 text-primary-foreground/80">
-              For donations, our team will share an 80G receipt and a quarterly impact update.
-            </p>
-            <ul className="mt-6 space-y-3 text-sm">
-              <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-sun/20 text-sun">✉</span> hello@idreambig.org</li>
-              <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-sun/20 text-sun">☎</span> +91 98000 12345</li>
-              <li className="flex items-start gap-3"><span className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-md bg-sun/20 text-sun">⌂</span> 14, Cooke Town, Bengaluru — 560005</li>
-            </ul>
+<section className="border-t border-border bg-transparent  text-slate-900">
+  <div className="mx-auto grid max-w-8xl gap-12 pl-30 px-5 pr-30 py-20 md:grid-cols-2">
+    <div>
+      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-600">Get in touch</div>
+      <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl text-slate-900">Donate, volunteer, or just say hello.</h2>
+      <p className="mt-4 text-slate-600">
+        For donations, our team will share an 80G receipt and a quarterly impact update.
+      </p>
+      <ul className="mt-6 space-y-3 text-sm text-slate-700">
+        <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">✉</span> hello@idreambig.org</li>
+        <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">☎</span> +91 98000 12345</li>
+        <li className="flex items-start gap-3"><span className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">⌂</span> 14, Cooke Town, Bengaluru — 560005</li>
+      </ul>
 
-            <div className="mt-10 grid grid-cols-2 gap-4 text-sm">
-              <div className="rounded-md border border-primary-foreground/15 bg-primary-foreground/[0.04] p-4">
-                <div className="text-xs uppercase tracking-wider text-sun">Office hours</div>
-                <div className="mt-1 font-semibold">Mon – Sat</div>
-                <div className="text-primary-foreground/75">9:30 AM – 6:30 PM IST</div>
-              </div>
-              <div className="rounded-md border border-primary-foreground/15 bg-primary-foreground/[0.04] p-4">
-                <div className="text-xs uppercase tracking-wider text-sun">Press & media</div>
-                <div className="mt-1 font-semibold">press@idreambig.org</div>
-                <div className="text-primary-foreground/75">Replies within 48 hrs</div>
-              </div>
-            </div>
-          </div>
-
-          <ContactForm />
+      <div className="mt-10 grid grid-cols-2 gap-4 text-sm">
+        <div className="rounded-md border border-slate-200 bg-slate-50 p-4">
+          <div className="text-xs uppercase tracking-wider text-amber-600">Office hours</div>
+          <div className="mt-1 font-semibold text-slate-900">Mon – Sat</div>
+          <div className="text-slate-600">9:30 AM – 6:30 PM IST</div>
         </div>
-      </section>
+        <div className="rounded-md border border-slate-200 bg-slate-50 p-4">
+          <div className="text-xs uppercase tracking-wider text-amber-600">Press & media</div>
+          <div className="mt-1 font-semibold text-slate-900">press@idreambig.org</div>
+          <div className="text-slate-600">Replies within 48 hrs</div>
+        </div>
+      </div>
+    </div>
+
+    <ContactForm />
+  </div>
+</section>
 
       <SiteFooter />
     </div>
@@ -70,29 +70,28 @@ function ContactForm() {
   return (
     <form
       onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-      className="rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.04] p-6"
+      className="rounded-lg border border-slate-200 bg-slate-50 p-6"
     >
       <div className="grid gap-4">
         <label className="block">
-          <span className="text-xs uppercase tracking-wider text-primary-foreground/70">Your name</span>
-          <input required className="mt-1 w-full rounded-md border border-primary-foreground/20 bg-transparent px-3 py-2 text-sm outline-none focus:border-sun" />
+          <span className="text-xs uppercase tracking-wider text-slate-600 font-medium">Your name</span>
+          <input required className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-amber-500" />
         </label>
         <label className="block">
-          <span className="text-xs uppercase tracking-wider text-primary-foreground/70">Email</span>
-          <input required type="email" className="mt-1 w-full rounded-md border border-primary-foreground/20 bg-transparent px-3 py-2 text-sm outline-none focus:border-sun" />
+          <span className="text-xs uppercase tracking-wider text-slate-600 font-medium">Email</span>
+          <input required type="email" className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-amber-500" />
         </label>
         <label className="block">
-          <span className="text-xs uppercase tracking-wider text-primary-foreground/70">How would you like to help?</span>
-          <select className="mt-1 w-full rounded-md border border-primary-foreground/20 bg-primary px-3 py-2 text-sm outline-none focus:border-sun">
-            <option>Donate</option>
+          <span className="text-xs uppercase tracking-wider text-slate-600 font-medium">How would you like to help?</span>
+          <select className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-amber-500">
             <option>Volunteer</option>
             <option>Partner with us</option>
             <option>Just saying hello</option>
           </select>
         </label>
         <label className="block">
-          <span className="text-xs uppercase tracking-wider text-primary-foreground/70">Message</span>
-          <textarea rows={4} className="mt-1 w-full rounded-md border border-primary-foreground/20 bg-transparent px-3 py-2 text-sm outline-none focus:border-sun" />
+          <span className="text-xs uppercase tracking-wider text-slate-600 font-medium">Message</span>
+          <textarea rows={4} className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-amber-500" />
         </label>
         <button type="submit" className="btn-flat btn-flat-hover btn-sun mt-2 self-start">
           {sent ? "Thank you — we'll be in touch ✓" : "Send message"}
