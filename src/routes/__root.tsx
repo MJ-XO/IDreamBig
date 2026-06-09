@@ -4,10 +4,11 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  notFound
 } from "@tanstack/react-router";
 import { useEffect } from "react";
 
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportLovableError } from "../lib/lovable-error-reporting";  
 
 function NotFoundComponent() {
   return (
@@ -72,6 +73,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 const queryClient = new QueryClient();
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  beforeLoad: () => {
+    throw notFound(); 
+  },
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
