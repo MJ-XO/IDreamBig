@@ -48,15 +48,15 @@ function StatsRow() {
     io.observe(el);
     return () => io.disconnect();
   }, []);
-  const a = useCount(4200, run);
-  const b = useCount(38, run);
-  const c = useCount(120, run);
-  const d = useCount(96, run);
+  const a = useCount(3200, run);
+  const b = useCount(970, run);
+  const c = useCount(8, run);
+  const d = useCount(20, run);
   const items = [
-    { v: a.toLocaleString() + "+", l: "Children supported" },
-    { v: b + "", l: "Partner schools" },
-    { v: c + "", l: "Volunteers" },
-    { v: d + "%", l: "Stay-in-school rate" },
+    { v: a.toLocaleString() + "+", l: "Women Entrepreneurs Trained" },
+    { v: b + "", l: "Women-led SMEs Supported" },
+    { v: c + "", l: "South Asian Countries Reached" },
+    { v: d + "%", l: "Years of Digital Transformation Experience" },
   ];
   return (
     <div ref={ref} className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -71,9 +71,9 @@ function StatsRow() {
 }
 
 const programs = [
-  { tag: "Foundations", title: "After-school learning circles", desc: "Daily reading, math, and science labs for children in grades 1–8 in underserved neighborhoods.", accent: "leaf" },
-  { tag: "Bridge", title: "Digital literacy & STEM kits", desc: "Hands-on robotics, coding, and tinkering kits that bring curiosity into every classroom.", accent: "primary" },
-  { tag: "Wings", title: "Mentorship & scholarships", desc: "One-on-one mentors and merit-need scholarships that carry students through high school and beyond.", accent: "sun" },
+  { tag: "Foundations", title: "Digital Skills & AI Academy", desc: "Training programs in Digital Marketing, E-Commerce, Artificial Intelligence, Business Automation, etc...", accent: "leaf" },
+  { tag: "Bridge", title: "Women Entrepreneurship Program", desc: "Supporting women-led enterprises through Business mentoring, E-commerce enablement, Digital marketing, Market access, etc...", accent: "primary" },
+  { tag: "Wings", title: "SME Digital Transformations", desc: "Helping MSMEs adopt E-Commerce, AI Tools, Digital Payments, CRM Systems, etc...", accent: "sun" },
 ] as const;
 
 function Home() {
@@ -81,7 +81,7 @@ function Home() {
     <div className="relative min-h-screen overflow-hidden">
       <PageDoodles variant="home" />
       <SiteHeader />
-      <BgSlider eyebrow="Welcome to iDreamBig" title="Where every child gets room to dream." />
+      <BgSlider eyebrow="Welcome to iDreamBig" title="Transform Lives. Create Impact." />
 
 
       {/* HERO */}
@@ -94,13 +94,13 @@ function Home() {
               <span className="h-1.5 w-1.5 rounded-full bg-leaf" /> Educational Trust · Est. 2014
             </span>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] text-primary md:text-6xl">
-              Every child deserves
+              Every woman deserves
               <br />
-              the room to <span className="text-leaf">dream</span>
+              the room to <span className="text-leaf">Dream</span>
               <span className="text-sun">.</span>
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
-              iDreamBig is a grassroots educational trust nurturing curiosity, confidence, and capability in children from communities the system too often overlooks.
+              Empowering women, youth, entrepreneurs, and communities through digital innovation, entrepreneurship, sustainability, and inclusive development.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/donate" className="btn-flat btn-flat-hover btn-sun">Donate now →</Link>
@@ -178,7 +178,7 @@ function Home() {
               <div className="text-xs font-semibold uppercase tracking-[0.2em] text-leaf">The people behind it</div>
               <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-4xl">A small core team. A wide circle of hands.</h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
-                Four full-time staff and over a hundred volunteers across India — teachers, designers, parents, alumni.
+                Two full-time entrepreneurs and over a hundred volunteers across India — teachers, designers, parents, alumni.
               </p>
             </div>
             <Link to="/about" className="btn-flat btn-flat-hover btn-outline-flat">Full team →</Link>
@@ -211,15 +211,24 @@ function Home() {
       <section className="mx-auto max-w-8xl pl-30 px-5 pr-30 pb-24">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <div className=" pt-10 text-xs font-semibold uppercase tracking-[0.2em] text-sun">A field note</div>
-            <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-4xl">“Ma'am, can I take the book home?”</h2>
+            <div className=" pt-10 text-xs font-semibold uppercase tracking-[0.2em] text-sun">A note from the founder</div>
+            <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-4xl">Message from the Founder</h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              The first time Lavanya stayed back after class, it was to finish a chapter on planets. She is nine. Her parents work the brick kilns and have never read a page in their life. Two years later, she's teaching her younger brother to read.
+              Our journey is inspired by a simple belief: every individual deserves an opportunity to learn, grow, innovate, and succeed. Through our initiatives, we strive to empower women, youth, entrepreneurs, and communities to transform their dreams into meaningful impact.
             </p>
-            <p className="mt-3 leading-relaxed text-muted-foreground">
-              Multiply that by four thousand children, and you'll know what we do — and why we keep showing up.
+            <p className="mt-3 mb-3 leading-relaxed text-muted-foreground">
+              Together, we can create a more inclusive, innovative, and sustainable future.
             </p>
-            <Link to="/about" className="btn-flat btn-flat-hover btn-leaf mt-6">Meet our team</Link>
+            <div className="flex max-w-sm items-center space-x-4 rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950">
+              <div className="space-y-1">
+                  <h4 className="pl-2 text-base font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+                      Deepali Shital Gotadke
+                  </h4>
+                  <p className="pl-2 text-sm font-medium text-muted-foreground">
+                      Founder Trustee
+                  </p>
+              </div>
+            </div>
           </div>
           <div className="order-1 md:order-2">
             <div className="card-textured grid grid-cols-2 gap-3 p-4">
@@ -247,7 +256,7 @@ function Home() {
             <div>
               <h2 className="font-display text-3xl font-bold md:text-4xl">A dream is a small thing to share.</h2>
               <p className="mt-3 max-w-xl text-primary-foreground/80">
-                ₹500 funds a child's learning kit for a month. ₹6,000 supports a full year of after-school care. Every contribution is receipted and 80G-eligible.
+                Your contribution helps us Train women entrepreneurs, Empower youth, Promote sustainability, Enable digital inclusion, Support SMEs and much more
               </p>
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">

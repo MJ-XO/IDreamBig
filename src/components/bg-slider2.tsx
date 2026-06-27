@@ -4,9 +4,9 @@ import s2 from "@/assets/slider-2.jpg";
 import s3 from "@/assets/slider-3.jpg";
 
 const slides = [
-  { src: s1, caption: "Every child, a classroom of possibility." },
-  { src: s2, caption: "Books open doors that no wall can close." },
-  { src: s3, caption: "When she learns, a generation moves forward." },
+  { src: s1, caption: "Creating opportunities through knowledge, innovation, and action" },
+  { src: s2, caption: "Empowering people. Strengthening communities. Building futures." },
+  { src: s3, caption: "Every number represents a life touched, a skill gained, and a dream set in motion." },
 ];
 
 export function BgSlider({ eyebrow, title }: { eyebrow?: string; title?: string }) {
@@ -16,7 +16,7 @@ export function BgSlider({ eyebrow, title }: { eyebrow?: string; title?: string 
     return () => clearInterval(id);
   }, []);
   return (
-    <section className="relative h-[42vh] min-h-[300px] w-full overflow-hidden border-b border-border bg-primary">
+    <section className="relative h-[42vh] min-h-[350px] w-full overflow-hidden border-b border-border bg-primary">
       {slides.map((s, idx) => (
         <div
           key={idx}

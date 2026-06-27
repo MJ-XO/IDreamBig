@@ -21,18 +21,19 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { title: "Dignity first", body: "Every child, parent, and teacher we meet is treated as a partner — not a beneficiary." },
-  { title: "Long arcs", body: "We commit to children for years, not semesters. Real learning takes time." },
-  { title: "Open by default", body: "Our budgets, curriculum, and outcomes are published openly each quarter." },
-  { title: "Local hands", body: "Programs are designed and delivered by educators from the communities we serve." },
+  { title: "Empowerment First", body: "Every individual deserves opportunities, resources, and support to realize their potential." },
+  { title: "Lifelong Learning", body: "Knowledge and continuous learning create lasting transformation." },
+  { title: "Innovation With Purpose", body: "We embrace technology and innovation to solve real-world challenges." },
+  { title: "Inclusion & Equity", body: "We believe growth should be accessible to everyone regardless of gender, background, or circumstance." },
 ];
 
 const milestones = [
-  { y: "2014", t: "Founded in a one-room library", d: "A weekend reading club for 18 children in a Bengaluru slum." },
-  { y: "2017", t: "First partner school", d: "Co-built an after-school program inside a government school." },
-  { y: "2020", t: "STEM kits go statewide", d: "Distributed 200+ tinkering kits during the pandemic year." },
-  { y: "2023", t: "Mentorship program launched", d: "Pairing high-schoolers with volunteer mentors." },
-  { y: "2025", t: "4,000+ children, 9 districts", d: "Scaled across Karnataka, Tamil Nadu, and Maharashtra." },
+  { y: "2020", t: "The Beginning", d: "iDreamBig was founded with a vision to empower individuals through knowledge, innovation, and opportunity." },
+  { y: "2021", t: "Building Foundations", d: "Initiated community outreach and capacity-building activities." },
+  { y: "2022", t: "Expanding Impact", d: "Launched entrepreneurship and digital skills development programs." },
+  { y: "2023", t: "Empowering Communities", d: "Strengthened support for women entrepreneurs and youth development initiatives." },
+  { y: "2024", t: "Scaling Reach", d: "Expanded partnerships and collaborative development programs nationally and internationally." },
+  { y: "2025", t: "Driving Sustainable Growth", d: "Focused on digital transformation, innovation, sustainability, and inclusive development. " },
 ];
 
 const team = [
@@ -52,7 +53,7 @@ function About() {
     <div className="relative min-h-screen overflow-hidden">
       <PageDoodles variant="about" />
       <SiteHeader />
-      <BgSlider eyebrow="About iDreamBig" title="Built by teachers, parents, and former students." />
+      <BgSlider eyebrow="About iDreamBig" title="Built by dreamers, driven by purpose." />
 
 
       {/* Hero */}
@@ -60,10 +61,10 @@ function About() {
         <div className="mx-auto max-w-8xl pl-30 px-5 pr-30 py-20 md:py-28">
           <div className="text-xs font-semibold uppercase tracking-[0.22em] text-leaf">About iDreamBig</div>
           <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-primary md:text-6xl">
-            We are teachers, parents, and former students — building the school we wish we had.
+            We are dreamers, builders, mentors, and changemakers — creating opportunities that transform lives and communities.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            iDreamBig is a registered educational trust working with children from low-income communities across South India. We believe a child's circumstances should never decide the ceiling of their imagination.
+            iDreamBig Trust is a non-profit organization dedicated to empowering women, youth, entrepreneurs, and communities through education, digital transformation, entrepreneurship, sustainability, and inclusive development initiatives. The Trust works nationally and internationally to create opportunities, build capacities, and promote economic and social progress.
           </p>
         </div>
       </section>
@@ -71,8 +72,8 @@ function About() {
       {/* Mission / Vision */}
       <section className="mx-auto grid max-w-8xl gap-6 pl-30 px-5 pr-30 py-20 md:grid-cols-2">
         {[
-          { k: "Mission", v: "To make excellent, joyful learning the right of every child — regardless of geography, gender, or income." },
-          { k: "Vision", v: "A generation of children who can read the world, question it, and shape it on their own terms." },
+          { k: "Mission", v: "To provide training, mentorship, technology access, research, and capacity-building programs that foster entrepreneurship, digital inclusion, sustainability, and inclusive growth." },
+          { k: "Vision", v: "To empower individuals and communities to dream big, innovate fearlessly, and create sustainable social and economic impact." },
         ].map((b) => (
           <div key={b.k} className="card-textured p-8">
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-sun">{b.k}</div>

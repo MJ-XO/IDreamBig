@@ -15,6 +15,12 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AchievementsRouteImport } from './routes/achievements'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as NewsWorkshopsRouteImport } from './routes/news.workshops'
+import { Route as NewsTrainingRouteImport } from './routes/news.training'
+import { Route as NewsStoriesRouteImport } from './routes/news.stories'
+import { Route as NewsConferencesRouteImport } from './routes/news.conferences'
+import { Route as NewsAnnouncementsRouteImport } from './routes/news.announcements'
+import { Route as AlbumAlbumIdRouteImport } from './routes/album.$albumId'
 
 const GoalsRoute = GoalsRouteImport.update({
   id: '/goals',
@@ -46,6 +52,36 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsWorkshopsRoute = NewsWorkshopsRouteImport.update({
+  id: '/news/workshops',
+  path: '/news/workshops',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsTrainingRoute = NewsTrainingRouteImport.update({
+  id: '/news/training',
+  path: '/news/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsStoriesRoute = NewsStoriesRouteImport.update({
+  id: '/news/stories',
+  path: '/news/stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsConferencesRoute = NewsConferencesRouteImport.update({
+  id: '/news/conferences',
+  path: '/news/conferences',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsAnnouncementsRoute = NewsAnnouncementsRouteImport.update({
+  id: '/news/announcements',
+  path: '/news/announcements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlbumAlbumIdRoute = AlbumAlbumIdRouteImport.update({
+  id: '/album/$albumId',
+  path: '/album/$albumId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +90,12 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
   '/goals': typeof GoalsRoute
+  '/album/$albumId': typeof AlbumAlbumIdRoute
+  '/news/announcements': typeof NewsAnnouncementsRoute
+  '/news/conferences': typeof NewsConferencesRoute
+  '/news/stories': typeof NewsStoriesRoute
+  '/news/training': typeof NewsTrainingRoute
+  '/news/workshops': typeof NewsWorkshopsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +104,12 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
   '/goals': typeof GoalsRoute
+  '/album/$albumId': typeof AlbumAlbumIdRoute
+  '/news/announcements': typeof NewsAnnouncementsRoute
+  '/news/conferences': typeof NewsConferencesRoute
+  '/news/stories': typeof NewsStoriesRoute
+  '/news/training': typeof NewsTrainingRoute
+  '/news/workshops': typeof NewsWorkshopsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +119,12 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
   '/goals': typeof GoalsRoute
+  '/album/$albumId': typeof AlbumAlbumIdRoute
+  '/news/announcements': typeof NewsAnnouncementsRoute
+  '/news/conferences': typeof NewsConferencesRoute
+  '/news/stories': typeof NewsStoriesRoute
+  '/news/training': typeof NewsTrainingRoute
+  '/news/workshops': typeof NewsWorkshopsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,8 +135,26 @@ export interface FileRouteTypes {
     | '/contact'
     | '/donate'
     | '/goals'
+    | '/album/$albumId'
+    | '/news/announcements'
+    | '/news/conferences'
+    | '/news/stories'
+    | '/news/training'
+    | '/news/workshops'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/achievements' | '/contact' | '/donate' | '/goals'
+  to:
+    | '/'
+    | '/about'
+    | '/achievements'
+    | '/contact'
+    | '/donate'
+    | '/goals'
+    | '/album/$albumId'
+    | '/news/announcements'
+    | '/news/conferences'
+    | '/news/stories'
+    | '/news/training'
+    | '/news/workshops'
   id:
     | '__root__'
     | '/'
@@ -91,6 +163,12 @@ export interface FileRouteTypes {
     | '/contact'
     | '/donate'
     | '/goals'
+    | '/album/$albumId'
+    | '/news/announcements'
+    | '/news/conferences'
+    | '/news/stories'
+    | '/news/training'
+    | '/news/workshops'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -100,6 +178,12 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DonateRoute: typeof DonateRoute
   GoalsRoute: typeof GoalsRoute
+  AlbumAlbumIdRoute: typeof AlbumAlbumIdRoute
+  NewsAnnouncementsRoute: typeof NewsAnnouncementsRoute
+  NewsConferencesRoute: typeof NewsConferencesRoute
+  NewsStoriesRoute: typeof NewsStoriesRoute
+  NewsTrainingRoute: typeof NewsTrainingRoute
+  NewsWorkshopsRoute: typeof NewsWorkshopsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -146,6 +230,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/news/workshops': {
+      id: '/news/workshops'
+      path: '/news/workshops'
+      fullPath: '/news/workshops'
+      preLoaderRoute: typeof NewsWorkshopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/training': {
+      id: '/news/training'
+      path: '/news/training'
+      fullPath: '/news/training'
+      preLoaderRoute: typeof NewsTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/stories': {
+      id: '/news/stories'
+      path: '/news/stories'
+      fullPath: '/news/stories'
+      preLoaderRoute: typeof NewsStoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/conferences': {
+      id: '/news/conferences'
+      path: '/news/conferences'
+      fullPath: '/news/conferences'
+      preLoaderRoute: typeof NewsConferencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/announcements': {
+      id: '/news/announcements'
+      path: '/news/announcements'
+      fullPath: '/news/announcements'
+      preLoaderRoute: typeof NewsAnnouncementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/album/$albumId': {
+      id: '/album/$albumId'
+      path: '/album/$albumId'
+      fullPath: '/album/$albumId'
+      preLoaderRoute: typeof AlbumAlbumIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -156,6 +282,12 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DonateRoute: DonateRoute,
   GoalsRoute: GoalsRoute,
+  AlbumAlbumIdRoute: AlbumAlbumIdRoute,
+  NewsAnnouncementsRoute: NewsAnnouncementsRoute,
+  NewsConferencesRoute: NewsConferencesRoute,
+  NewsStoriesRoute: NewsStoriesRoute,
+  NewsTrainingRoute: NewsTrainingRoute,
+  NewsWorkshopsRoute: NewsWorkshopsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

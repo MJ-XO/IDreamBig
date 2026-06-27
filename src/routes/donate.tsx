@@ -17,10 +17,10 @@ export const Route = createFileRoute("/donate")({
 });
 
 const tiers = [
-  { amt: 500, label: "A month of kits", desc: "Funds a child's notebooks, pencils, and learning kit for one month." },
-  { amt: 2500, label: "A term of mentoring", desc: "Pairs a high-schooler with a trained mentor for an entire term." },
-  { amt: 6000, label: "A year of after-school", desc: "Supports a child through a full year of our after-school program." },
-  { amt: 25000, label: "A classroom of STEM", desc: "Equips an entire classroom with a tinkering & robotics kit." },
+  { amt: 500, label: "Digital Learning Support", desc: "Helps provide educational resources, training materials, and digital learning access." },
+  { amt: 2500, label: "Entrepreneur Starter Kit", desc: "Supports a woman or youth entrepreneur with essential training and mentorship." },
+  { amt: 6000, label: "Skill Development Program", desc: "Funds capacity-building workshops and practical skill training sessions." },
+  { amt: 25000, label: "Community Empowerment Initiative", desc: "Helps organize outreach programs that benefit underserved communities." },
 ];
 
 function Donate() {
@@ -39,10 +39,10 @@ function Donate() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-leaf">Why give</div>
             <h2 className="mt-2 font-display text-3xl font-bold text-primary md:text-4xl">
-              Every rupee is a page turned, a question asked, a door opened.
+              Every contribution creates opportunities, builds confidence, and transforms futures.
             </h2>
             <p className="mt-5 max-w-xl text-muted-foreground">
-              iDreamBig is a registered educational trust. Donations are 80G tax-eligible in India and every paisa is reported in our quarterly open ledger.
+              Your support helps us empower women entrepreneurs, train youth, promote digital inclusion, strengthen small businesses, and create sustainable community development programs.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">

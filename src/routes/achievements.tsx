@@ -16,18 +16,18 @@ export const Route = createFileRoute("/achievements")({
 });
 
 const stats = [
-  { v: "4,200+", l: "Children in active programs" },
-  { v: "62", l: "Partner government schools" },
-  { v: "9", l: "Districts across three states" },
-  { v: "11", l: "Years of continuous service" },
+  { v: "3,200+", l: "Women Entrepreneurs Trained" },
+  { v: "970+", l: "Women-Led SMEs Supported" },
+  { v: "20+", l: "Years of Industry & Consulting Experience" },
+  { v: "100+", l: "Workshops & Capacity Building Programs" },
 ];
 
 const awards = [
-  { y: "2024", t: "Karnataka State Education Award", d: "Recognised for outstanding contribution to foundational literacy in government schools." },
-  { y: "2023", t: "Rohini Nilekani Philanthropies Fellowship", d: "Selected as a fellow organisation for community-led education initiatives." },
-  { y: "2022", t: "GuideStar India Platinum Certification", d: "Highest level of transparency and accountability rating for non-profits in India." },
-  { y: "2021", t: "UNESCO MGIEP Mention", d: "Featured in the global report on social-emotional learning for under-resourced contexts." },
-  { y: "2019", t: "Ashoka Changemaker Schools Network", d: "Two partner schools inducted into the global Changemaker network." },
+  { y: "2021", t: "Trust Registration Completed", d: "Establishing a platform for sustainable social impact." },
+  { y: "2022", t: "Digital Transformation Initiatives", d: "Helping communities and SMEs embrace technology." },
+  { y: "2023", t: "Entrepreneurship Programs Launched", d: "Supporting women, youth, and emerging business leaders." },
+  { y: "2024", t: "Global Development Partnerships", d: "Collaborated with international organizations and development programs." },
+  { y: "2025", t: "1,000+ Individuals Empowered", d: "Through training, mentoring, and capacity-building initiatives." },
 ];
 
 const highlights = [
@@ -42,7 +42,7 @@ function AchievementsPage() {
     <div className="relative min-h-screen overflow-hidden">
       <PageDoodles variant="achievements" />
       <SiteHeader />
-      <BgSlider eyebrow="Achievements" title="Eleven years. Thousands of dreams." />
+      <BgSlider eyebrow="Achievements" title="Thousands empowered. One opportunity at a time." />
 
 
       {/* Hero */}
@@ -50,10 +50,10 @@ function AchievementsPage() {
         <div className="mx-auto max-w-8xl pl-30 px-5 pr-30 py-20 md:py-28">
           <div className="text-xs font-semibold uppercase tracking-[0.22em] text-leaf">Achievements</div>
           <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-primary md:text-6xl">
-            Eleven years. Thousands of children. Counted, one classroom at a time.
+            Where Vision Becomes Impact.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Every number on this page is a child, a teacher, a volunteer, or a partner who said yes. Here is what that has added up to.
+            Measuring success through lives empowered and opportunities created
           </p>
         </div>
       </section>
@@ -73,7 +73,7 @@ function AchievementsPage() {
       {/* Awards timeline */}
       <section className="border-y border-border bg-secondary/30">
         <div className="mx-auto max-w-8xl pl-30 px-5 pr-30 py-20">
-          <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">Awards & recognitions</h2>
+          <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">Milestones</h2>
           <ol className="mt-10 space-y-6">
             {awards.map((a) => (
               <li key={a.y + a.t} className="grid grid-cols-[80px_1fr] gap-6 md:grid-cols-[120px_1fr]">

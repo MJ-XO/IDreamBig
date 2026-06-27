@@ -172,3 +172,12 @@
   50% { transform: translateY(-6px); }
 }
 @utility animate-float { animation: float-soft 5s ease-in-out infinite; }
+
+/* Mobile-friendly padding overrides */
+@media (max-width: 768px) {
+  .pl-30 { padding-left: 0 !important; }
+  .pr-30 { padding-right: 0 !important; }
+  .pl-10 { padding-left: 0 !important; }
+  .pl-42 { padding-left: 0 !important; }
+  .gap-x-46 { gap: 0 !important; }
+}

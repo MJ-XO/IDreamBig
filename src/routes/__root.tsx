@@ -66,9 +66,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 const queryClient = new QueryClient();
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  beforeLoad: () => {
-    throw notFound(); 
-  },
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,

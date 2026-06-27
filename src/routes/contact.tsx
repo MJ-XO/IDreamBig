@@ -21,7 +21,7 @@ function ContactPage() {
     <div className="relative min-h-screen overflow-hidden">
       <PageDoodles variant="contact" />
       <SiteHeader />
-      <BgSlider eyebrow="Contact" title="Let's build something good, together." />
+      <BgSlider eyebrow="Contact" title="Let's create impact, together." />
 
 
       {/* Hero */}
@@ -32,21 +32,21 @@ function ContactPage() {
   <div className="mx-auto grid max-w-8xl gap-12 pl-30 px-5 pr-30 py-20 md:grid-cols-2">
     <div>
       <div className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-600">Get in touch</div>
-      <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl text-slate-900">Donate, volunteer, or just say hello.</h2>
+      <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl text-slate-900">Collaborate, Volunteer, or Just say Hello.</h2>
       <p className="mt-4 text-slate-600">
         For donations, our team will share an 80G receipt and a quarterly impact update.
       </p>
       <ul className="mt-6 space-y-3 text-sm text-slate-700">
-        <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">✉</span> hello@idreambig.org</li>
-        <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">☎</span> +91 98000 12345</li>
-        <li className="flex items-start gap-3"><span className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">⌂</span> 14, Cooke Town, Bengaluru — 560005</li>
+        <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">✉</span> deepali@webdreams.in</li>
+        <li className="flex items-center gap-3"><span className="flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">☎</span> +91 97411 97999</li>
+        <li className="flex items-start gap-3"><span className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-md bg-amber-100 text-amber-700">⌂</span> #51 - B, Behind Mahaveer School, Bailappanavar Nagar,Hubli - 580 029</li>
       </ul>
 
       <div className="mt-10 grid grid-cols-2 gap-4 text-sm">
         <div className="rounded-md border border-slate-200 bg-slate-50 p-4">
           <div className="text-xs uppercase tracking-wider text-amber-600">Office hours</div>
           <div className="mt-1 font-semibold text-slate-900">Mon – Sat</div>
-          <div className="text-slate-600">9:30 AM – 6:30 PM IST</div>
+          <div className="text-slate-600">10:30 AM – 6:30 PM IST</div>
         </div>
         <div className="rounded-md border border-slate-200 bg-slate-50 p-4">
           <div className="text-xs uppercase tracking-wider text-amber-600">Press & media</div>
