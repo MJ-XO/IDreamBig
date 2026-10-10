@@ -53,7 +53,7 @@ function About() {
     <div className="relative min-h-screen overflow-hidden">
       <PageDoodles variant="about" />
       <SiteHeader />
-      <BgSlider eyebrow="About iDreamBig" title="Built by dreamers, driven by purpose." />
+      <BgSlider eyebrow="About iDreamBig" title="Built by dreamerss, driven by purpose." />
 
 
       {/* Hero */}
