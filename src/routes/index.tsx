@@ -4,7 +4,7 @@ import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { BgSlider } from "@/components/bg-slider";
 import { PageDoodles } from "@/components/page-doodles";
 import hero from "@/assets/hero-children.jpg";
-import logo from "@/assets/iDreamBig_logo_high_resolution.png";
+import logo from "@/assets/";
 import deepaliImg from '@/assets/deepali.jpg';
 import tanishaImg from '@/assets/tanisha.jpg';
 
