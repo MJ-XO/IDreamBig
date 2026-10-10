@@ -50,7 +50,7 @@ function ContactPage() {
         </div>
         <div className="rounded-md border border-slate-200 bg-slate-50 p-4">
           <div className="text-xs uppercase tracking-wider text-amber-600">Press & media</div>
-          <div className="mt-1 font-semibold text-slate-900">press@idreambig.org</div>
+          <div className="mt-1 font-semibold text-slate-900">info@idreambig.org</div>
           <div className="text-slate-600">Replies within 48 hrs</div>
         </div>
       </div>
